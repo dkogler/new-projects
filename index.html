@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Daniel's Frogsite</title>
+        <style>
+            body {
+                background: darkgray;
+                color: midnightblue;
+                padding: 10px;
+                font-family: arial;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+
+            /* navigation menu */
+            nav {
+                background: orange;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+                border-radius: 16px;
+            }
+            h1 {
+                display: flex;
+                align-items: center;
+                color: azure;
+                flex: 1;
+                margin: 0;
+            }
+            #nav-ul {
+                list-style-image: none;
+            }
+            .nav-li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            a {
+                text-decoration: none;
+                color: azure;
+            }
+
+            /* main container area beneath menu */
+            main {
+                background: tan;
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar-img {
+                width: 384px;
+                height: 256px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            #interests {
+                border: 4px silver ridge;
+                padding: 8px;
+            }
+            h2, h3 {
+                margin: 0px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- All content goes here -->
+        <div id="all-contents"> 
+            <nav>
+                <h1>Welcome to the Toad House</h1>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="portfolio.html"> Portfolio </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <!-- Sidebar section -->
+                <div class="sidebar">
+                    <img class="sidebar-img" src="http://images.archant.co.uk/polopoly_fs/1.5004922.1493982850!/image/image.jpg_gen/derivatives/landscape_630/image.jpg">
+                </div>
+
+                <!-- Content section -->
+                <div class="content">
+                    <h2>Daniel Kogler</h2>
+                    <p>Instructor at Operation Spark</h2>
+                    <!-- Interests section -->
+                    <div id="interests">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Frogs</li>
+                            <li>Toads</li>
+                            <li>Amphibians</li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
+
+
