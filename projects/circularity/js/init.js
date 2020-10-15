@@ -22,7 +22,21 @@ var init = function (window) {
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
         
-        
+       function randomNumberBetween(min, max) {
+            var difference = max - min;
+            var randomValue = Math.random() * difference;
+            return min + randomValue;
+        }
+
+        var circles = [];
+
+        for (var count = 1; count <= 100; count++){
+            var circleN = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            view.addChild(circleN);
+            circleN.velocityX = randomNumberBetween(-2, 2);
+            circleN.velocityY = randomNumberBetween(-2, 2);
+            circles.push(circleN);
+        }
 
 
         ////////////////////////////////////////////////////////////
@@ -36,8 +50,11 @@ var init = function (window) {
         */
         function update() {
             
-           
-            
+            for (var i = 0; i <= circles.length-1; i++) { 
+                circles[i].x = circles[i].x + circles[i].velocityX;
+                circles[i].y = circles[i].y + circles[i].velocityY;
+                game.checkCirclePosition(circles[i]);
+            }
         }
     
         /* 
@@ -50,6 +67,15 @@ var init = function (window) {
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
+            }
+            if (circle.x < 0){
+                circle.x = canvas.width;
+            }
+            if (circle.y > canvas.height){
+                circle.y = 0;
+            }
+            if (circle.y < 0) {
+                circle.y = 0;
             }
             
         }
