@@ -7,10 +7,7 @@ var init = function (window) {
         app = window.opspark.makeApp(),
         canvas = app.canvas, 
         view = app.view,
-        fps = draw.fps('#000'),
-        
-        drawCircle,
-        circles;
+        fps = draw.fps('#000');
         
     
     window.opspark.makeGame = function() {
@@ -22,21 +19,13 @@ var init = function (window) {
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
         
-       function randomNumberBetween(min, max) {
-            var difference = max - min;
-            var randomValue = Math.random() * difference;
-            return min + randomValue;
-        }
+        // TODO 1 : Declare and initialize our variables
 
-        var circles = [];
 
-        for (var count = 1; count <= 100; count++){
-            var circleN = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            view.addChild(circleN);
-            circleN.velocityX = randomNumberBetween(-2, 2);
-            circleN.velocityY = randomNumberBetween(-2, 2);
-            circles.push(circleN);
-        }
+        // TODO 2 : Create a function that draws a circle 
+        
+
+        // TODO 3 / 7 : Call the drawCircle() function 
 
 
         ////////////////////////////////////////////////////////////
@@ -49,12 +38,15 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
         function update() {
+            // TODO 4 : Update the circle's position //
+
             
-            for (var i = 0; i <= circles.length-1; i++) { 
-                circles[i].x = circles[i].x + circles[i].velocityX;
-                circles[i].y = circles[i].y + circles[i].velocityY;
-                game.checkCirclePosition(circles[i]);
-            }
+            // TODO 5 : Call game.checkCirclePosition() on your circles.
+           
+
+            // TODO 8 : Iterate over the array
+           
+            
         }
     
         /* 
@@ -68,16 +60,12 @@ var init = function (window) {
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            if (circle.x < 0){
-                circle.x = canvas.width;
-            }
-            if (circle.y > canvas.height){
-                circle.y = 0;
-            }
-            if (circle.y < 0) {
-                circle.y = 0;
-            }
             
+            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+            
+
+
+            // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
         /////////////////////////////////////////////////////////////
